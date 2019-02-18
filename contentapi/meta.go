@@ -1,5 +1,6 @@
 package contentapi
 
+// Pagination represents pagination info returned from browse endpoints
 type Pagination struct {
 	Page  int64 `json:"page"`
 	Limit int64 `json:"limit"`
@@ -9,6 +10,7 @@ type Pagination struct {
 	Prev  int64 `json:"prev"`
 }
 
+// Meta represents the meta information returned from browse endpoints
 type Meta struct {
 	Pagination *Pagination `json:"pagination"`
 }

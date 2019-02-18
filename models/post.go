@@ -2,6 +2,7 @@ package models
 
 import "time"
 
+// Post represents the Post model in Ghost's API
 type Post struct {
 	ID                 string    `json:"id"`
 	UUID               string    `json:"uuid"`

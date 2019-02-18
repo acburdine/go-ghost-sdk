@@ -12,13 +12,14 @@ type postResponse struct {
 	Meta  *Meta          `json:"meta"`
 }
 
-type PostEndpoints struct {
+// PostResource represents actions that can be done on the Posts resource
+type PostResource struct {
 	client *Client
 }
 
 // Browse returns a list of posts
 // TODO(acb): support passing in qs options
-func (p *PostEndpoints) Browse() ([]*models.Post, *Meta, error) {
+func (p *PostResource) Browse() ([]*models.Post, *Meta, error) {
 	req, err := p.client.buildRequest("posts", url.Values{})
 	if err != nil {
 		return nil, nil, err

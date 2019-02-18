@@ -60,7 +60,7 @@ type Client struct {
 	key, version, apiPath string
 	httpClient            *http.Client
 
-	Posts *PostEndpoints
+	Posts *PostResource
 }
 
 func (c *Client) buildRequest(endpoint string, params url.Values) (*http.Request, error) {
@@ -100,7 +100,7 @@ func New(httpClient *http.Client, opts *Options) (*Client, error) {
 		httpClient: httpClient,
 	}
 
-	client.Posts = &PostEndpoints{&client}
+	client.Posts = &PostResource{&client}
 
 	return &client, nil
 }
