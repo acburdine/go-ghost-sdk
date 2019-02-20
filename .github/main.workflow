@@ -16,6 +16,10 @@ action "sjkaliski/go-github-actions/fmt@v0.2.0" {
 action "sjkaliski/go-github-actions/lint@v0.2.0" {
   uses = "sjkaliski/go-github-actions/lint@v0.2.0"
   secrets = ["GITHUB_TOKEN"]
+
+  env = {
+    GO_LINT_PATHS = "./contentapi/... ./models/..."
+  }
 }
 
 action "go vet" {

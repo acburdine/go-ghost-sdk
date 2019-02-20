@@ -9,6 +9,8 @@ type Post struct {
 	Title              string    `json:"title"`
 	Slug               string    `json:"slug"`
 	HTML               string    `json:"html"`
+	Plaintext          string    `json:"plaintext"`
+	Mobiledoc          string    `json:"mobiledoc"`
 	CommentID          string    `json:"comment_id"`
 	FeatureImage       string    `json:"feature_image"`
 	Featured           bool      `json:"featured"`
