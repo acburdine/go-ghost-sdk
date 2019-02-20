@@ -1,4 +1,4 @@
-// contentapi implements the Ghost Content SDK
+// Package contentapi implements the Ghost Content SDK
 package contentapi
 
 import (
@@ -16,8 +16,10 @@ type Client struct {
 	key, version, apiPath string
 	httpClient            *http.Client
 
-	Posts *PostResource
-	Pages *PageResource
+	Posts   *PostResource
+	Pages   *PageResource
+	Authors *AuthorResource
+	Tags    *TagResource
 }
 
 func (c *Client) makeRequest(endpoint string, params url.Values) (*http.Response, error) {
@@ -75,6 +77,8 @@ func New(httpClient *http.Client, opts *ClientOptions) (*Client, error) {
 
 	client.Posts = &PostResource{&client}
 	client.Pages = &PageResource{&client}
+	client.Authors = &AuthorResource{&client}
+	client.Tags = &TagResource{&client}
 
 	return &client, nil
 }

@@ -1,4 +1,4 @@
-// models contains representations of the various objects in the Ghost API
+// Package models contains representations of the various objects in the Ghost API
 package models
 
 // Author represents the Author model in Ghost's API

@@ -13,7 +13,7 @@ type pageResponse struct {
 	Meta  *Meta          `json:"meta"`
 }
 
-// PageResource represents actions that can be done on the Posts resource
+// PageResource represents actions that can be done on the Page resource
 type PageResource struct {
 	client *Client
 }
