@@ -1,3 +1,4 @@
+// contentapi implements the Ghost Content SDK
 package contentapi
 
 import (
